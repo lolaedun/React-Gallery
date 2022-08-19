@@ -1,6 +1,6 @@
 # React-Gallery
 
-Created using React, Picsum and Codesandbox.
+Created using React, Picsum API and Codesandbox IDE.
 
 ![Mock up](images/react-gallery.png)
 
