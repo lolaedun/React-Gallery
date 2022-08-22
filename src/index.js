@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Header, TileView, Photo } from "./components";
+import { Header, TileView, Photo, Frame } from "./components";
 
 import "./styles.css";
 
@@ -41,6 +41,7 @@ class App extends React.Component {
             );
           })}
         </TileView>
+        {this.state.currentPhotoId !== null && <Frame />}
       </div>
     );
   }

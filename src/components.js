@@ -30,9 +30,20 @@ const fullscreenStyles = {
   bottom: 0,
   left: 0,
   height: "80vh",
-  margin: "auto"
+  margin: "auto",
+  zIndex: 10
 };
 
 export const Photo = styled("img")((props) =>
   props.isActive ? fullscreenStyles : thumbnailStyles
 );
+
+export const Frame = styled("div")({
+  position: "fixed",
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  backgroundColor: "hsla(0, 0%, 100%, 0.96)",
+  zIndex: 5
+});
