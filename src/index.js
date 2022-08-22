@@ -27,14 +27,19 @@ class App extends React.Component {
           <h1>&#128247; Picsum </h1>x
         </Header>
         <TileView>
-          {this.state.images.map((image) => (
-            <Photo
-              key={image.id}
-              src={`https://picsum.photos/1000/1000?image=${image.id}`}
-              isActive={this.state.currentPhotoId === image.id}
-              onClick={() => this.setState({ currentPhotoId: image.id })}
-            />
-          ))}
+          {this.state.images.map((image) => {
+            const isActive = this.state.currentPhotoId === image.id;
+            return (
+              <Photo
+                key={image.id}
+                src={`https://picsum.photos/1000/1000?image=${image.id}`}
+                isActive={isActive}
+                onClick={() =>
+                  this.setState({ currentPhotoId: isActive ? null : image.id })
+                }
+              />
+            );
+          })}
         </TileView>
       </div>
     );
