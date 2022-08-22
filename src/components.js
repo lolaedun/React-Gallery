@@ -20,7 +20,8 @@ TileView.defaultProps = {
 const thumbnailStyles = {
   display: "block",
   width: "100%",
-  objectFit: "cover"
+  objectFit: "cover",
+  cursor: "zoom-in"
 };
 
 const fullscreenStyles = {
@@ -31,7 +32,8 @@ const fullscreenStyles = {
   left: 0,
   width: "80vw",
   margin: "auto",
-  zIndex: 10
+  zIndex: 10,
+  cursor: "zoom-out"
 };
 
 export const Photo = styled("img")((props) =>
