@@ -17,8 +17,22 @@ TileView.defaultProps = {
   minCellWidth: 120
 };
 
-export const Photo = styled("img")({
+const thumbnailStyles = {
   display: "block",
   width: "100%",
   objectFit: "cover"
-});
+};
+
+const fullscreenStyles = {
+  position: "fixed",
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  height: "80vh",
+  margin: "auto"
+};
+
+export const Photo = styled("img")((props) =>
+  props.isActive ? fullscreenStyles : thumbnailStyles
+);

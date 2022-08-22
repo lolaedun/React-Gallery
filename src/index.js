@@ -7,7 +7,8 @@ import "./styles.css";
 
 class App extends React.Component {
   state = {
-    images: []
+    images: [],
+    currentPhotoId: null
   };
   componentDidMount() {
     fetch("https://picsum.photos/v2/list")
@@ -30,6 +31,8 @@ class App extends React.Component {
             <Photo
               key={image.id}
               src={`https://picsum.photos/1000/1000?image=${image.id}`}
+              isActive={this.state.currentPhotoId === image.id}
+              onClick={() => this.setState({ currentPhotoId: image.id })}
             />
           ))}
         </TileView>
