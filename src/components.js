@@ -14,7 +14,7 @@ export const TileView = styled("div")((props) => ({
 
 TileView.defaultProps = {
   spacing: 16,
-  minCellWidth: 240
+  minCellWidth: 120
 };
 
 export const Photo = styled("img")({
