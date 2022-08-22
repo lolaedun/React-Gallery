@@ -29,7 +29,7 @@ const fullscreenStyles = {
   right: 0,
   bottom: 0,
   left: 0,
-  height: "80vh",
+  width: "80vw",
   margin: "auto",
   zIndex: 10
 };
